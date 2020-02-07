@@ -1,0 +1,98 @@
+<!-- Score: 98 (including this line!) -->
+<html>
+<head>
+<script>
+var result;
+var operator;
+var total;
+function init() {
+	result = document.getElementById("result");
+	operator = document.getElementById("operator");
+	total = 0;
+	result.innerHTML = total;
+	operator.innerHTML = "";
+}
+function press_num(key) {
+	if(result.innerHTML == "0" && key != ".") {
+		result.innerHTML = key;	
+		if(operator.innerHTML == "=") { operator.innerHTML = "";}
+	} else if(operator.innerHTML == "=") {
+		if(key == ".") {
+			result.innerHTML = "0.";	
+		} else {
+			result.innerHTML = key;	
+		}
+		operator.innerHTML = "";
+	} else {
+		result.innerHTML += key;
+	}
+}
+function complete_op(op) {
+	if(op == "+") { total += parseFloat(result.innerHTML); }
+	else if(op == "-") { total -= parseFloat(result.innerHTML); }
+	else if(op == "*") { total *= parseFloat(result.innerHTML); }
+	else if(op == "/") { total /= parseFloat(result.innerHTML); }
+	else if(op == "%") { total %= parseFloat(result.innerHTML); }
+	else  /*if op == "") */ { total = parseFloat(result.innerHTML); }
+}
+function press_op(key) {
+	complete_op(operator.innerHTML); // finish the old operator
+	operator.innerHTML = key;
+	if(key == "=") {
+			result.innerHTML = total;
+	} else {
+		result.innerHTML = 0;
+	}
+}
+function backspace() {
+	// Thanks, Stack Overflow: https://stackoverflow.com/a/952945/10957435
+	result.innerHTML = result.innerHTML.slice(0,-1);
+}
+</script>
+<style> /* Not really needed, can be removed if we need to */
+#calculator { 
+	user-select:none;	
+}
+#result { 
+	user-select:text;	
+}
+</style>
+</head>
+<body onLoad="init()">
+
+<table width="300" height="200" id="calculator" border="1px">
+<tr>
+	<td height="40" colspan=4 id="result"></td>
+    <td id="operator"></td>
+</tr>
+<tr>
+	<td onClick="press_num(1)">1</td>
+    <td onClick="press_num(2)">2</td>
+    <td onClick="press_num(3)">3</td>
+    <td onClick="press_op('+')">+</td>
+    <td onClick="press_op('-')">-</td>
+</tr>
+<tr>
+	<td onClick="press_num(4)">4</td>
+    <td onClick="press_num(5)">5</td>
+    <td onClick="press_num(6)">6</td>
+    <td onClick="press_op('*')">*</td>
+    <td onClick="press_op('/')">/</td>
+</tr>
+<tr>
+	<td onClick="press_num(7)">7</td>
+    <td onClick="press_num(8)">8</td>
+    <td onClick="press_num(9)">9</td>
+    <td onClick="press_op('%')">%</td>
+    <td onClick="press_num('.')">.</td>
+</tr>
+<tr>
+	<td onClick="press_num(0)">0</td>
+    <td onClick="init()">C</td>
+    <td onClick="result.innerHTML = 0;">CE</td>
+    <td onClick="press_op('=')">=</td>
+    <td onClick="backspace()">&lt;-</td>
+</tr>
+</table>
+</body>
+</html>
