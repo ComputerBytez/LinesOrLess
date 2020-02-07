@@ -17,7 +17,7 @@ With that, feel free to challenge yourself and try some of this yourself.
 
 ## 100 lines or less
 
-1. [The Calculator](https://github.com/ComputerBytez/LinesOrLess/tree/master/100/calculator)
+1. [The Calculator](https://github.com/ComputerBytez/LinesOrLess/tree/master/100/calculator) ([Blog post](https://www.computerbytez.com/how-to-write-a-calculator-in-100-lines-or-less/))
 
 ___
 
