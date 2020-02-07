@@ -1,4 +1,4 @@
-# LinesOrLess
+# The Lines Or Less Challenge 
 A repository of Lines or Less challenges.
 
 Every challenge in this repository is under the MIT license, unless otherwise specified.
