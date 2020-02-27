@@ -18,7 +18,7 @@ With that, feel free to challenge yourself and try some of this yourself.
 ## 100 lines or less
 
 1. [The Calculator](https://github.com/ComputerBytez/LinesOrLess/tree/master/100/calculator) ([Blog post](https://www.computerbytez.com/how-to-write-a-calculator-in-100-lines-or-less/))
-2. [Tic Tac Toe Game](https://github.com/ComputerBytez/LinesOrLess/tree/master/100/TicTacToe) ([Blog post](how-to-write-a-tic-tac-toe-game-in-100-lines-or-less))
+2. [Tic Tac Toe Game](https://github.com/ComputerBytez/LinesOrLess/tree/master/100/TicTacToe) ([Blog post](https://www.computerbytez.com/how-to-write-a-tic-tac-toe-game-in-100-lines-or-less/))
 ___
 
 **Note:** this list is a work in progress and will get updated as I complete more challenges.
